@@ -9,7 +9,7 @@ echo "" > $location/pack.json
 for filename in $(ls $location)
 do
   # If you need a different file extension you can add them to this line
-  if [ $filename == *.png ] || [ $filename == *.gif ] || [ $filename == *.webp ]
+  if [[ $filename == *".png" || $filename == *".gif" || $filename == *".webp" ]]
   then
     echo "\"${filename%.*}\": \"$filename\"," >> $location/pack.json
   fi
